@@ -33,7 +33,9 @@
    --dark-brown: #C99B67;
    --dark-grey: #0A775F;
    --white: #F8F8F2;
-   --text-color: #F8F8F2;
+   --text-color-black: #000;
+   --text-color-light-black: #333;
+   --outline-colot: var(--dark-grey);
 
 }
 
@@ -57,9 +59,9 @@ body{
     flex-direction: column;
     padding: 0;
     margin: 0;
-    background-color: #fff;
-    color: #222;
-    font-family: 'Roboto','Arial' sans-serif;
+    background-color: var(--white);
+    color: var(--text-color-black);
+    font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -69,13 +71,33 @@ img{
     height: auto;
 }
 
+*:focus{
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 3px;
+}
+
 .container{
     width: 100%;
-    max-width: 1180px;
-    padding-right: 30px;
-    padding-left: 30px;
+    max-width: 1440px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.button{
+   display: inline-block;
+   padding: 16px 24px; 
+   font-weight: 500;
+   border: 0;
+   border-radius: 100px;
+   background-color: var(--dark-grey);
+   color: var(--white);
+   cursor: pointer;
+   line-height: normal;
+   letter-spacing: 1px;
+   align-items: center;
+   text-transform: uppercase;
 }
 
 .main{
@@ -83,29 +105,62 @@ img{
     background-color: var(--light-brown)
 }
 
-/* SITENAV */
-.site-header {
-    padding: 40px 50px;
+/* SITE-HEADER-WRAPPER */
+.site-header-hero-wrapper{
+    background-image: url(/img/header-intro-bg.jpg);
 }
 
-.site-header-content {
+/* RETINA BG */
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+        .site-header-hero-wrapper{
+            background-image: url(/img/header-intro-bg@2x.png);
+        }
+        
+}
+
+/* SITE-HEADER */
+.site-header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.site-header-container {
     display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
     justify-content: space-between;
     align-items: center;
 }
 
-.site-header-logo{
+.site-header-logo-link{
+    display: flex;
+    text-decoration: none;
     
 }
 
+.site-header-logo-link:hover{
+    opacity: 0.8;
+}
+
+.site-header-logo-link:active{
+    opacity: 0.6;
+}
+
 .site-header-img{
-    display: block;
     width: 235px;
     height: 24px;
     object-fit: contain;
 }
 
+/* SITE-NAV */
 .sitenav-list {
+    padding: 0;margin: 0;
     display: flex;
     margin: 0;padding: 0;
     list-style: none;
@@ -116,6 +171,7 @@ img{
 }
 
 .sitenav-link {
+    display: block;
     font-size: 12px;
     font-weight: 700;
     color: #333;
@@ -123,4 +179,46 @@ img{
     line-height: normal;
     text-decoration: none;
     text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+.sitenav-link:hover{
+    color: var(--dark-grey);
+}
+
+.sitenav-link:active{
+    opacity: 0.6;
+}
+
+/* HERO */
+.hero {
+    padding-top: 156px;
+    padding-bottom: 249px;
+    background-image: url(/img/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: left calc(50%+240px) center;
+}
+
+.hero-main {
+    width: 100%;
+    max-width: 464px;
+}
+
+.hero-heading {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 64px;
+    line-height: normal;
+    color: var(--text-color-black);
+}
+
+.hero-text {
+    margin-bottom: 34px;
+    line-height: 24px;
+    color: var(--text-color-black);
+}
+.hero-btn:hover {
+    opacity: 0.8;
+}
+.button {
 }

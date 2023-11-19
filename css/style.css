@@ -141,6 +141,7 @@ img{
 .site-header-logo-link{
     display: flex;
     text-decoration: none;
+    flex-shrink: 0;
     
 }
 
@@ -180,6 +181,7 @@ img{
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s ease;
+    white-space: nowrap;
 }
 
 .sitenav-link:hover{
@@ -194,12 +196,9 @@ img{
 .hero {
     padding-top: 156px;
     padding-bottom: 249px;
-    background-image: url(/img/hero-img.jpg);
-    background-repeat: no-repeat;
-    background-position: left calc(50%+240px) center;
 }
 
-.hero-main {
+.hero-wrapper {
     width: 100%;
     max-width: 464px;
 }
@@ -220,5 +219,7 @@ img{
 .hero-btn:hover {
     opacity: 0.8;
 }
-.button {
+
+.btn-green{
+    text-decoration: none;
 }

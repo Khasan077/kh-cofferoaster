@@ -117,10 +117,6 @@ img{
     background-color: var(--dark-grey-60);
 }
 
-.main{
-    flex-grow: 1;
-    background-color: var(--light-brown)
-}
 
 /* SITE-HEADER-WRAPPER */
 .site-header-hero-wrapper{
@@ -251,4 +247,31 @@ img{
     width: 710px;
     height: 696px;
     object-fit: cover;
+}
+
+/* MAIN-CONTENT */
+.main-content{
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+/* INDEX COLLECTION */
+.index-collection {
+}
+.container {
+}
+.index-collection-heading {
+}
+.index-collection-list {
+}
+.index-coolection-item {
+}
+.index-collection-item {
+}
+.index-collection-info {
+}
+.index-collection-title {
+}
+.index-collection-text {
 }

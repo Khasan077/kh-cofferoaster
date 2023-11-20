@@ -30,13 +30,13 @@
 /* CUSTOM PRPERTY */
 :root{
    --light-brown: #F3D7B7; 
+   --light-bg: #F8F8F2;
    --dark-brown: #C99B67;
    --dark-brown-80: rgb(201, 155, 103 0.8);
    --dark-brown-60: rgb(201, 155, 103 0.6 );
    --dark-grey: #0A775F;
    --dark-grey-80: rgb(10, 119, 95, 0.8);
    --dark-grey-60: rgb(10, 119, 95,  0.6);
-   --white: #F8F8F2;
    --text-color-black: #000;
    --text-color-light-black: #333;
    --outline-colot: var(--dark-grey);
@@ -105,7 +105,7 @@ img{
 
 .btn-hero-green{
     background-color: var(--dark-grey);
-    color: var(--white);
+    color: var(--light-bg);
     text-decoration: none;
 }
 
@@ -136,6 +136,9 @@ img{
             background-image: url(/img/header-intro-bg@2x.png);
         }
         
+        .index-collection-inner{
+            background-image: url(../img/light-bg@2x.jpg);
+        }
 }
 
 /* SITE-HEADER */
@@ -257,21 +260,67 @@ img{
 }
 
 /* INDEX COLLECTION */
-.index-collection {
+.index-collection-inner{
+    padding: 50px 143px;
+    background-color: var(--light-bg);
+    background-image: url(../img/light-bg.jpg);
 }
-.container {
-}
+
 .index-collection-heading {
+    margin-top: 0;
+    margin-bottom: 80px;
+    font-size: 50px;
+    line-height: normal;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
 }
+
 .index-collection-list {
+    padding: 0;margin: 0;
+    list-style: none;
 }
+
 .index-coolection-item {
+    display: flex;
+    align-items: center;
 }
-.index-collection-item {
+
+.index-coolection-item:nth-child(even){
+    flex-direction: row-reverse;
 }
+
+.index-collection-img {
+    flex-shrink: 0;
+    width: 450px;
+    height: 375px;
+    object-fit: cover;
+}
+
 .index-collection-info {
+    flex-grow: 1;
+    padding-right: 117px;
+    padding-left: 117px;
 }
+
 .index-collection-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 48px;    
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--text-color-light-black);
 }
+
 .index-collection-text {
+    margin: 0;
+    font-size: 22px;
+    line-height: 34px;
+    color: var(--text-color-light-black);
+}
+
+.index-collection-text:not(:last-child){
+    margin-bottom: 10px;
 }
